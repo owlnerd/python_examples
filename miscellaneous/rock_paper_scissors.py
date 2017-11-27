@@ -20,12 +20,12 @@ while True:
         break
     elif inpt in rps_map.keys():
         ai_sel = random.choice(rps_map.keys())
-        print("Computer chooses: %s" % ai_sel)
+        print("\n%s: %s\n%s: %s\n" % (pl_name, inpt, ai_name, ai_sel))
         if rps_map[inpt] == ai_sel:
-            print("%s win :)" % pl_name)
+            print("%s wins" % pl_name)
             pl_scr += 1
         elif rps_map[ai_sel] == inpt:
-            print("%s wins :(" % ai_name)
+            print("%s wins" % ai_name)
             ai_scr += 1
         else:
             print("Draw xD")
