@@ -7,8 +7,10 @@ rps_map = {
 }
 
 pl_name = raw_input("%sInput player name >> " % ('\n' * 100))
-ai_name = choice(["R2D2", "HAL 9000", "C3PO", "T-800", "T-1000",
-                  "Nexus", "Marvin", "Iron Giant", "Eve", "Skynet"])
+ai_name = choice(["R2-D2", "HAL 9000", "C-3PO", "T-800", "T-1000", "Nexus",
+                  "Marvin", "Iron Giant", "EVE", "Skynet", "Intel", "AMMD",
+                  "President Eden", "Robocop", "WALL-E", "Atom", "Megatron",
+                  "Optimus Prime", "Bishop"])
 pl_score = 0
 ai_score = 0
 
