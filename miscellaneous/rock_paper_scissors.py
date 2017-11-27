@@ -22,10 +22,10 @@ while True:
         ai_sel = random.choice(rps_map.keys())
         print("Computer chooses: %s" % ai_sel)
         if rps_map[inpt] == ai_sel:
-            print("You win :)")
+            print("%s win :)" % pl_name)
             pl_scr += 1
         elif rps_map[ai_sel] == inpt:
-            print("Computer wins :(")
+            print("%s wins :(" % ai_name)
             ai_scr += 1
         else:
             print("Draw xD")
