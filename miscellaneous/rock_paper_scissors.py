@@ -1,4 +1,4 @@
-import random
+from random import choice
 
 rps_map = {
     "rock": "scissors",
@@ -7,7 +7,7 @@ rps_map = {
 }
 
 pl_name = raw_input("%sInput player name >> " % ('\n' * 100))
-ai_name = random.choice(["R2D2", "HAL 9000", "C3PO", "T-800", "T-1000",
+ai_name = choice(["R2D2", "HAL 9000", "C3PO", "T-800", "T-1000",
                          "Nexus", "Marvin", "Iron Giant", "Eve", "Skynet"])
 pl_scr = 0
 ai_scr = 0
@@ -19,7 +19,7 @@ while True:
     if inpt == "quit":
         break
     elif inpt in rps_map.keys():
-        ai_sel = random.choice(rps_map.keys())
+        ai_sel = choice(rps_map.keys())
         print("\n%s: %s\n%s: %s\n" % (pl_name, inpt, ai_name, ai_sel))
         if rps_map[inpt] == ai_sel:
             print("%s wins" % pl_name)
