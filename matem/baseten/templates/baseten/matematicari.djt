@@ -1,0 +1,30 @@
+{% extends 'baseten/base_page.djt' %}
+
+{% block PAGE_TITLE %}Matematicari | [mathemating]{% endblock %}
+
+{% block MAIN_MENU %}
+      <a href="/">POCETNA</a>
+      <a href="/calculators/">KALKULATORI</a>
+      <a href="" id="current">MATEMATICARI</a>
+      <a href="#">LINKOVI</a>
+{% endblock %}
+
+{% block SIDE_LINKS %}
+        <p>MATEMATICARI</p>
+        <ul>
+          <li><a href="{% url 'input_mathematician' %}">UNOS MATEMATICARA</a></li>
+          <li><a href="{% url 'read_mathematician' %}">LISTANJE MATEMATICARA</a></li>
+          <li><a href="{% url 'delete_mathematician' %}">BRISANJE MATEMATICARA</a></li>
+        </ul>
+{% endblock %}
+
+{% block MAIN_CONTENT %}
+        <h2>Matematicari</h2>
+        <p>Ova sekcija demonstrira Django modele i mogucnosti vezane za
+          upravljanje bazama podataka.</p>
+        <p>Celokupna sekcija se sastoji od tri strane. Jedna je ova, cisto
+           informativna, a ostalim dvema se moze pristupiti nterakcijom sa
+           linkovima u sidebar-u levo.
+        <p>Demonstracija ukljucuje unosenje podataka u bazu i citanje
+           podataka iz baze.</p>
+{% endblock %}

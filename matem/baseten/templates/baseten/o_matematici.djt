@@ -1,0 +1,44 @@
+{% extends 'baseten/base_page.djt' %}
+
+{% block PAGE_TITLE %}O Matematici | [mathemating]{% endblock %}
+
+{% block MAIN_MENU %}
+      <a href="/" id="current">POCETNA</a>
+      <a href="/calculators/">KALKULATORI</a>
+      <a href="/mathematicians/">MATEMATICARI</a>
+      <a href="#">LINKOVI</a>
+{% endblock %}
+
+{% block SIDE_LINKS %}
+        <p>MATEMATIKA</p>
+        <ul>
+          <li><a href="/o-nauci/">O NAUCI</a></li>
+          <li><a id="curr" href="">O MATEMATICI</a></li>
+          <li><a href="/primene-matematike/">PRIMENE MATEMATIKE</a></li>
+        </ul>
+        <p>KORISNI LINKOVI</p>
+        <ul>
+          <li><a href="https://www.wikipedia.org/" target="_blank">WIKIPEDIA</a></li>
+          <li><a href="https://www.wolframalpha.com/" target="_blank">WOLFRAM</a></li>
+        </ul>
+{% endblock %}
+
+{% block MAIN_CONTENT %}
+        <h2>Opste o matematici</h2>
+        <p>Matematika (grč. μαθηματική što znači učenje) je formalna i egzaktna nauka koja je nastala izučavanjem figura i računanjem s brojevima.</p>
+        <p>Iako ne postoji opšteprihvaćena definicija matematike, pod matematikom se u širem smislu podrazumeva da je ona nauka o količini (aritmetika), strukturi (algebra), prostoru (geometrija) i promeni (analiza).</p>
+        <p>Matematika je nauka koja izučava aksiomatski definisane apstraktne strukture koristeći logiku. Izučavane strukture najčešće potiču iz drugih prirodnih nauka, najčešće fizike, ali neke od struktura su definisane i izučavane radi internih razloga.</p>
+        <p>Istorijski, matematika se razvila iz potrebe da se obavljanja proračuna u trgovini, vršenje merenja zemljišta i predviđanje astronomskih događaja. Ove tri početne primene matematike se mogu dovesti u vezu sa grubom podelom matematike na izučavanje strukture, prostora i promena.</p>
+        <p>Izučavanje strukture počinje sa brojevima, u početku sa prirodnim brojevima i celim brojevima. Osnovna pravila za aritmetičke operacije su definisana u osnovnoj algebri a dodatna svojstva celih brojeva se izučavaju u teoriji brojeva. Izučavanje metoda za rešavanje jednačina je dovelo do razvoja apstraktne algebre koja između ostalog izučava prstenove i polja, strukture koje generalizuju osobine koje poseduju brojevi. Fizički važan koncept vektora se izučava u linearnoj algebri.</p>
+        <h2>Nauka o brojevima</h2>
+        <p>Matematika se bavi proučavanjem brojeva. Njihovim proučavanjem je započeto i proučavanje struktura. Od svih skupova brojeva, najpre su formirani i proučavani prirodni brojevi, a zatim celi brojevi. Formirani su realni brojevi, kao brojeve koji predstavljaju kontinualne veličine. Iz matematičkih razloga uveden je koncept kompleksnih brojeva.</p>
+        <h2>Algebra</h2>
+        <p>Matematika se bavi proučavanjem struktura (matematičkih struktura), koje spadaju u granu matematike - algebru.</p>
+        <p>Izučavanje struktura je započeto proučavanjem brojeva. Na početku su formirani i proučavani prirodni brojevi i celi brojevi. Osnovna pravila za aritmetičke operacije su definisana u osnovnoj algebri a dodatna svojstva celih brojeva se izučavaju u teoriji brojeva. Izučavanje metoda za rešavanje jednačina je dovelo do razvoja apstraktne algebre koja prvenstveno izučava prstenove i polja, tj. strukture koje generalizuju osobine koje poseduju brojevi. Važan fizički koncept vektora izučava se u linearnoj algebri. Radi pojašnjavanja i izučavanja osnova matematike, razvijene su oblasti teorija skupova, matematička logika i teorija modela.</p>
+        <h2>Geometrija</h2>
+        <p>Matematika se bavi proučavanjem prostora, koji spada u granu matematike - geometriju.</p>
+        <p>Izučavanje prostora je započelo sa geometrijom. Najpre je nastala Euklidska geometrija i trigonometrija u pojmljivom trodimenzionalnom prostoru, koja se kasnije proširila na neeuklidske geometrije koje imaju centralnu ulogu u opštoj relativnosti. Moderna polja geometrije su diferencijalna geometrija i algebarska geometrija. Teorija grupa izučava koncept simetrije. Topologija izučava strukture u prostoru i njihove izmene pri neprekidnim preslikavanjima.</p>
+        <h2>Analiza</h2>
+        <p>Matematika se bavi proučavanjem beskonačno malih promena, koje spadaju u granu matematike - matematičku analizu.</p>
+        <p>Teorija diferencijalnog računa je razvijena iz potreba prirodnih nauka za razumevanjem i opisivanjem promena koje se izvrše kod merljivih varijabli. Centralni koncept kojim se opisuje promena varijable je funkcija. Mnogi prirodni problemi su vodili uspostavljanju veze između vrednosti i količine izmene. Metode koje su razvijene za opisivanje i proučavanje ovakvih problema se izučavaju u teoriji diferencijalnih jednačina. Brojevi koji predstavljaju kontinualne veličine su realni brojevi, i detaljno izučavanje njihovih svojstava i funkcija je predmet matematičke analize. Zbog matematičkih razloga, uveden je koncept kompleksnih brojeva koji se izučavaju u kompleksnoj analizi. Funkcionalna analiza je usmerena na analiziranje n-dimenzionalnih prostora funkcija postavljajući time osnovu za izučavanje kvantne mehanike.</p>
+{% endblock %}

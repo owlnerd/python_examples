@@ -1,0 +1,39 @@
+{% extends 'baseten/base_page.djt' %}
+
+{% block PAGE_TITLE %}Stepen | [mathemating]{% endblock %}
+
+{% block MAIN_MENU %}
+      <a href="/">POCETNA</a>
+      <a href="" id="current">KALKULATORI</a>
+      <a href="/mathematicians/">MATEMATICARI</a>
+      <a href="#">LINKOVI</a>
+{% endblock %}
+
+{% block SIDE_LINKS %}
+        <p>KALKULATORI</p>
+        <ul>
+          <li><a href="" id="curr">STEPEN</a></li>
+          <li><a href="/calculators/factorial/">FAKTORIJEL</a></li>
+          <li><a href="/calculators/gcd/">NZD</a></li>
+          <li><a href="/calculators/primes/">PROSTI BROJEVI</a></li>
+          <li><a href="/calculators/prime-factors/">PROSTI CINIOCI</a></li>
+        </ul>
+{% endblock %}
+
+{% block MAIN_CONTENT %}
+        <h2>Stepen</h2>
+        <p>Ovo je forma za unos podataka na osnovnu kojih se izracunava x-ti
+          stepen broja. Podaci se unose u obliku [osnova^izlozilac]  gde obe
+          komponente moraju biti u intervalu <span class="nowrap">[-100.0, 100.0]</span>
+          iako <strong>Python</strong> moze da iskrcka dosta vece brojeve i samo
+          ogranicenje daleko podilazi ogranicenje samog jezika.</p>
+        <p>Nakon popunjavanja forme klikni na '<em>IZRACUNAJ</em>'.
+        <form action="" method="post" novalidate>
+          <table>
+            <tr><th>{{ form.base.label_tag }}</th><td>{{ form.base }}</td><td class="ierr">{{ form.base.errors }}</td></tr>
+            <tr><th>{{ form.exponent.label_tag }}</th><td>{{ form.exponent }}</td><td class="ierr">{{ form.exponent.errors }}</td></tr>
+            <tr><td colspan="3"><input id="isub" type="submit" value="IZRACUNAJ" /></td></tr>
+          </table>
+          {% csrf_token %}
+        </form>
+{% endblock %}

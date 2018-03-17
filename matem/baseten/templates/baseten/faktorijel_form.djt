@@ -1,0 +1,38 @@
+{% extends 'baseten/base_page.djt' %}
+
+{% block PAGE_TITLE %}Faktorijel | [mathemating]{% endblock %}
+
+{% block MAIN_MENU %}
+      <a href="/">POCETNA</a>
+      <a href="" id="current">KALKULATORI</a>
+      <a href="/mathematicians/">MATEMATICARI</a>
+      <a href="#">LINKOVI</a>
+{% endblock %}
+
+{% block SIDE_LINKS %}
+        <p>KALKULATORI</p>
+        <ul>
+          <li><a href="/calculators/power/">STEPEN</a></li>
+          <li><a href="" id="curr">FAKTORIJEL</a></li>
+          <li><a href="/calculators/gcd/">NZD</a></li>
+          <li><a href="/calculators/primes/">PROSTI BROJEVI</a></li>
+          <li><a href="/calculators/prime-factors/">PROSTI CINIOCI</a></li>
+        </ul>
+{% endblock %}
+
+{% block MAIN_CONTENT %}
+        <h2>Faktorijel</h2>
+        <p>Ovo je forma za unos podataka koji se prosledjuju funkciji za
+          izracunavanje faktorijel datog prirodnog broja. Uneti
+          broj mora biti u intervalu <span class="nowrap">[0, 50]</span> zbog
+          ekstremno brzog rasta funkcije faktorijel. Ipak ne zelimo stocifrene
+          rezultate.</p>
+        <p>Nakon popunjavanja forme klikni na '<em>IZRACUNAJ</em>'.
+        <form action="" method="post" novalidate>
+          <table>
+            <tr><th>{{ form.n.label_tag }}</th><td>{{ form.n }}</td><td class="ierr">{{ form.n.errors }}</td></tr>
+            <tr><td colspan="3"><input id="isub" type="submit" value="IZRACUNAJ" /></td></tr>
+          </table>
+          {% csrf_token %}
+        </form>
+{% endblock %}

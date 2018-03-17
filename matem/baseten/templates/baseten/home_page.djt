@@ -1,0 +1,51 @@
+{% extends 'baseten/base_page.djt' %}
+
+{% block PAGE_TITLE %}Pocetna Strana | [mathemating]{% endblock %}
+
+{% block MAIN_MENU %}
+      <a href="{% url 'homepage' %}" id="current">POCETNA</a>
+      <a href="/calculators/">KALKULATORI</a>
+      <a href="{% url 'mathematicians' %}">MATEMATICARI</a>
+      <a href="#">LINKOVI</a>
+{% endblock %}
+
+{% block SIDE_LINKS %}
+        <p>MATEMATIKA</p>
+        <ul>
+          <li><a href="{% url 'about_science' %}">O NAUCI</a></li>
+          <li><a href="{% url 'about_math' %}">O MATEMATICI</a></li>
+          <li><a href="{% url 'applications' %}">PRIMENE MATEMATIKE</a></li>
+        </ul>
+        <p>KORISNI LINKOVI</p>
+        <ul>
+          <li><a href="https://www.wikipedia.org/" target="_blank">WIKIPEDIA</a></li>
+          <li><a href="https://www.wolframalpha.com/" target="_blank">WOLFRAM</a></li>
+        </ul>
+{% endblock %}
+
+{% block MAIN_CONTENT %}
+        <h2>Dobrodosli na [mathemating]</h2>
+        <p>Ovaj sajt je projektovan od nule i zamisljen kao demonstracija
+          osnovnih funkcionalnosti <strong>Django</strong> web framework-a.</p>
+        <p>Prikazuje mapiranje URL-ova, dizajn i implementaciju view-ova kao i
+          dizajn i implementaciju modela (komponenta "M" iz MVC-a :)).
+          Celokupan sajt je implementiran kao jednokomponentna aplikacija i
+          pruza mogucnost citanja podataka iz i unosenja u bazu.</p>
+        <p>Navigacija sajta je jednostavno dizajnirana, u vidu glavnog menija
+          i sporednih linkova. Do glavnih sekcija na sajtu se stize putem
+          glavne navigacione linije u zaglavlju stranica sajta, dok se sporedni
+          linkovi nalaze sa leve strane sadrzaja u vidu takozvanog sidebara</p>
+        <p>Pod glavnom sekcijom <em>KALKULATORI</em> mogu se naci mali programi koji
+          izvrsavaju neka osnovna izracunavanja kao sto su racunanje stepena
+          broja, racunanje faktorijela, pronalazenje najveceg zajednickog
+          delioca i listanje prvih n prostih brojeva. Svrha ove sekcije je
+          da demonstrira kako je u programiranje u okviru <strong>Django</strong>
+          frameworks u stvari standardno <strong>Python</strong> programiranje
+          sa minornim razlicitostima vezanim za specificnosti biblioteka u
+          okviru samog <strong>Django</strong> framework-a. Svi algoritmi su
+          implementirani u jeziku <strong>Python</strong></p>
+        <p>Pod sekcijom <em>MATEMATICARI</em> su prikazane mogucnosti za rad sa bazama
+          podataka i modelima napisanim na jeziku Python koji omogucavaju
+          lako i univerzalno manipulisanje tim podacima.</p>
+        <p>Pozdrav i srecno :)</p>
+{% endblock %}

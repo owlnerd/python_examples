@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>{% block PAGE_TITLE %}{% endblock %}</title>
+  <style>
+
+    #main_container {
+      margin: auto;
+      width: 960px;
+    }
+
+    #header {
+      background-color: #d1e0e0;
+      text-align: center;
+      padding: 5px;
+    }
+
+    #header h1 {
+      font-family: Calibri;
+      font-size: 2.7em;
+      font-weight: bold;
+      margin: 10px;
+      color: #293d3d;
+      padding-bottom: 15px
+    }
+
+    #menu {
+      overflow: hidden;
+      background-color: #293d3d;
+    }
+
+    #menu a {
+      float: left;
+      display: block;
+      color: #d1e0e0;
+      text-align: center;
+      padding: 10px 16px;
+      text-decoration: none;
+      font-family: Calibri;
+      font-size: 1em;
+      font-weight: bold;
+    }
+
+    #menu a:hover {
+      background-color: #d1e0e0;
+      color: #293d3d;
+    }
+    #menu a#current {
+      background-color: #d1e0e0;
+      color: #293d3d;
+    }
+
+    #sidebar {
+      float: left;
+      /*background-color: #d1e0e0;*/
+      padding: 20px 0 20px 25px;
+      width: 25%;
+      box-sizing:border-box;
+    }
+
+    #sidebar p {
+      font-family: Calibri;
+      font-size: 1em;
+      padding: 0px 0px 0px 0px;
+      font-weight: bold;
+      color: #476b6b;
+      margin: 0 0 5px 0;
+    }
+
+    #sidebar ul {
+      list-style: none;
+      padding: 0 0 0 15px;
+      margin: 0 0 20px 0;
+    }
+
+    #sidebar ul a {
+      font-family: Calibri;
+      font-size: 0.9em;
+      text-decoration: none;
+      padding: 0;
+      margin: 5px 0 0 0 ;
+      color: #293d3d;
+    }
+
+    #sidebar ul a:hover {
+      text-decoration: underline;
+
+    }
+
+    #sidebar ul a#curr {
+      text-decoration: underline;
+    }
+
+    #content {
+      box-sizing:border-box;
+      float: left;
+      width: 75%;
+      padding: 0px 30px 20px 30px;
+    }
+
+    #content h2 {
+      font-family: Calibri;
+      font-size: 1.5em;
+      color: #293d3d;
+      margin: 30px 0px 10px 0px;
+      padding:0;
+    }
+
+    #content p {
+      margin:10px 0 10px 0;
+      padding-left: 15px;
+      font-family: Calibri;
+      color: #293d3d;
+    }
+
+    #content p.powres {
+      margin-top: 30px;
+      padding: 10px;
+      font-weight: normal;
+      font-size: 1.2em;
+      font-family: Tahoma;
+    }
+
+    #content p.fctres {
+      margin-top: 30px;
+      padding: 10px;
+      font-weight: normal;
+      font-size: 0.9em;
+      font-family: Tahoma;
+    }
+
+    #content p.cinioci {
+      margin-top: 30px;
+      padding: 10px;
+      font-weight: normal;
+      font-size: 1.2em;
+      font-family: Tahoma;
+    }
+
+    .nowrap {
+      white-space: nowrap;
+    }
+
+    #content li.out {
+      font-family: Tahoma;
+      font-size: 1.2em;
+      color: #293d3d;
+      list-style-type: none;
+    }
+
+    #cnt {
+      margin: 10px 0 10px 0;
+    }
+
+   #cnt:after {
+     content: "";
+     display: table;
+     clear: both;
+   }
+
+    #footer {
+      border-width: 5px 0 0 0;
+      border-style: solid;
+      border-color: #293d3d;
+      text-align: right;
+      padding: 15px;
+    }
+
+    #footer h3 {
+      font-family: Calibri;
+      font-size: 1.5em;
+      color: #476b6b;
+      font-weight: bold;
+      margin: 0 0 5px 0;
+    }
+
+    #footer p {
+      color: #476b6b;
+      font-family: Calibri;
+      font-size: 1em;
+      margin: 0
+    }
+
+    form {
+      margin: 20px 0 20px 0;
+      padding: 10px 0 10px 0;
+      border-style: solid;
+      border-width: 2px;
+      border-color:  #d1e0e0;
+     /* background-color: #d1e0e0*/
+    }
+
+    form table {
+      margin: auto;
+      padding: 0;
+      width: 90%
+    }
+
+    form table th {
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    form table td {
+      height: 50px
+    }
+
+    form label {
+      font-size: 1.1em;
+      font-family: Calibri;
+      font-weight: normal;
+      color: #293d3d;
+      padding-right: 5px;
+    }
+
+    form input .itxt{
+      margin: 5px 0 5px 0;
+    }
+
+    .ierr {
+      width: 100%;
+      font-family: Calibri;
+      color: red;
+      padding-left: 15px;
+    }
+
+    .ierr ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .ierr li {
+      list-style-type: none;
+      padding:0;
+      margin:0
+    }
+
+    form #isub {
+      /*margin-top: 20px;*/
+      font-family: Calibri;
+      padding:5px 30px 5px 30px;
+      font-size: 1.2em;
+      font-weight: bold;
+      background-color: #293d3d;
+      color: #d1e0e0;
+      border: 0;
+      border-radius: 3px;
+      float: right;
+    }
+
+    table.listing {
+      margin: 30px 0 0 0;
+      /*border: 2px solid #d1e0e0;*/
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table.listing th {
+      text-align: left;
+      height: 20px;
+      background-color: #293d3d;
+      color: #d1e0e0;
+      font-size: 1.2em;
+      font-family: Calibri;
+      font-weight: bold;
+      /*width: 50%;*/
+      /*border: 1px;*/
+      padding: 10px 0 10px 30px;
+    }
+
+    table.listing td {
+      color: #293d3d;
+      font-family: Calibri;
+      padding: 5px 0 5px 40px;
+      margin: 0;
+      border: 1px
+
+    }
+
+    table.listing tr.even {
+      background-color: #d1e0e0;
+    }
+
+    table.listing tr:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="main_container">
+    <div id="header">
+      <h1>[mathemating]</h1>
+    </div>
+    <div id="menu">
+      {% block MAIN_MENU %}{% endblock %}
+    </div>
+    <div id="cnt">
+      <div id="sidebar">
+        {% block SIDE_LINKS %}{% endblock %}
+      </div>
+      <div id="content">
+        {% block MAIN_CONTENT %}{% endblock %}
+      </div>
+    </div>
+    <div id="footer">
+      <h3>[mathemating]</h3>
+    </div>
+  </div>
+</body>
+
+</html>

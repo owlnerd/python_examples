@@ -1,0 +1,26 @@
+{% extends 'baseten/base_page.djt' %}
+
+{% block PAGE_TITLE %}Faktorijel rezultat | [mathemating]{% endblock %}
+
+{% block MAIN_MENU %}
+      <a href="/">POCETNA</a>
+      <a href="" id="current">KALKULATORI</a>
+      <a href="/mathematicians/">MATEMATICARI</a>
+      <a href="#">LINKOVI</a>
+{% endblock %}
+
+{% block SIDE_LINKS %}
+        <p>KALKULATORI</p>
+        <ul>
+          <li><a href="/calculators/power/">STEPEN</a></li>
+          <li><a href="" id="curr">FAKTORIJEL</a></li>
+          <li><a href="/calculators/gcd/">NZD</a></li>
+          <li><a href="/calculators/primes/">PROSTI BROJEVI</a></li>
+          <li><a href="/calculators/prime-factors/">PROSTI CINIOCI</a></li>
+        </ul>
+{% endblock %}
+
+{% block MAIN_CONTENT %}
+        <h2>Faktorijel En :)</h2>
+        <p class="fctres">{{ data.n }}! = {{ fct }}</p>
+{% endblock %}

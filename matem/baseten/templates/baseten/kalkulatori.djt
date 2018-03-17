@@ -1,0 +1,34 @@
+{% extends 'baseten/base_page.djt' %}
+
+{% block PAGE_TITLE %}Kalkulatori | [mathemating]{% endblock %}
+
+{% block MAIN_MENU %}
+      <a href="/">POCETNA</a>
+      <a href="" id="current">KALKULATORI</a>
+      <a href="/mathematicians/">MATEMATICARI</a>
+      <a href="#">LINKOVI</a>
+{% endblock %}
+
+{% block SIDE_LINKS %}
+        <p>KALKULATORI</p>
+        <ul>
+          <li><a href="/calculators/power/">STEPEN</a></li>
+          <li><a href="/calculators/factorial/">FAKTORIJEL</a></li>
+          <li><a href="/calculators/gcd/">NZD</a></li>
+          <li><a href="/calculators/primes/">PROSTI BROJEVI</a></li>
+          <li><a href="/calculators/prime-factors/">PROSTI CINIOCI</a></li>
+        </ul>
+{% endblock %}
+
+{% block MAIN_CONTENT %}
+        <h2>Kalkulatori</h2>
+        <p>U odeljku levo nalaze se linkovi ka kalkulatorima koji pokazuju
+          backend programiranje na jeziku <strong>Python</strong> pod
+          <strong>Django</strong> framework-om.
+        <p>Aplikacije su u stvari obicne stranic sa formama koje je potrebno
+          popuniti da bi se nako submitovanja pokazala stranica sa rezultatom
+          za dato izracunavanje.</p>
+        <p>Svi algoritmi su implementirani, nisu koriscene gotove funkcije.</p>
+        <p>Tako je govorio Zaratustra.</p>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'baseten/base_page.djt' %}
+
+{% block PAGE_TITLE %}O Nauci | [mathemating]{% endblock %}
+
+{% block MAIN_MENU %}
+      <a href="/" id="current">POCETNA</a>
+      <a href="/calculators/">KALKULATORI</a>
+      <a href="/mathematicians/">MATEMATICARI</a>
+      <a href="#">LINKOVI</a>
+{% endblock %}
+
+{% block SIDE_LINKS %}
+        <p>MATEMATIKA</p>
+        <ul>
+          <li><a id="curr" href="">O NAUCI</a></li>
+          <li><a href="/o-matematici/">O MATEMATICI</a></li>
+          <li><a href="/primene-matematike/">PRIMENE MATEMATIKE</a></li>
+        </ul>
+        <p>KORISNI LINKOVI</p>
+        <ul>
+          <li><a href="https://www.wikipedia.org/" target="_blank">WIKIPEDIA</a></li>
+          <li><a href="https://www.wolframalpha.com/" target="_blank">WOLFRAM</a></li>
+        </ul>
+{% endblock %}
+
+{% block MAIN_CONTENT %}
+        <h2>Opste o nauci</h2>
+        <p>Nauka je sistem sređenih i sistematiziranih znanja o nama i (materijalnom i nematerijalnom) svetu koji nas okružuje. To je obimna i opsežna grupa informacija i o nekom subjektu, ali se ta reč posebno koristila za informacije o fizičkom univerzumu. Pojam nauke odgovara grč. pojmu ἐπιστήμη, epistḗmē, lat. scientia, engl. science. Kako se znanje povećavalo, pojedine metode su se dokazale pouzdanijim od nekih drugih, i danas su naučne metode standard za nauku. To uključuje korištenje pažljivog posmatranja, eksperimente, merenja, matematiku, i ponavljanje.</p>
+        <p>Da bi se uzeo u razmatranje sa naučnog stanovišta, objekat posmatranja mora biti podvrgnut ponovljenim testiranjima od strane nezavisnih posmatrača. Korištenje naučnih metoda za dostizanje novih otkrića se naziva naučno istraživanje, i ljudi koji rade ta istraživanja se zovu naučnici. U užem smislu, nauka se naziva eksperimentalnom, dok je svrha primenjene nauke, odnosno inžinjerstva, praktično upotrebljavanje naučnog znanja. Naučne hipoteze su edukovani predlozi objašnjenja fenomena ili razumne pretpostavke o prirodi univerzuma.</p>
+        <p>Naučna teorija je hipoteza koja je potvrđena ponovljenim posmatranjima i merenjima. Naučne teorije su obično date kao matematičke forme, i uvek su podložne odbacivanju ako ih budući eksperimenti opovrgnu. U modernom svetu, naučna istraživanja su važne aktivnosti svih razvijenih država, i od naučnika se očekuje da objave svoja otkrića u referentnim časopisima, naučnim periodicima gde recenzenti proveravaju činjenice navedene u članku, pre nego što se on objavi. Čak i posle objavljivanja, nove naučne ideje nisu generalno prihvaćene dok se rad ne ponovi.</p>
+        <p>Naučna pismenost je sposobnost opšte populacije da razume osnovne koncepte koji se odnose na nauku.</p>
+        <h2>Istorija</h2>
+        <p>Nauka u svom originalnom smislu je reč za tip znanja (latinski scientia, starogrčki jezik epistemē), pre nego specijalizovana reč za potragu za takvim znanjem. Specifično ona je jedan od tipova znanja koji ljudi mogu da komuniciraju jedan drugom. Na primer, znanje o delovanju prirodnih stvari je bilo prikupljeno dugo pre zabeležene istorije i dovelo je do razvoja kompleksong apstraktnog razmišljanja. To je pokazano konstruisanjem kompleksnih kalendara, tehnika za preobražavanje otrovnih biljaka u jestive, i izgradnji objekata kao što su piramide. Međutim nisu pravljene konzistentne svesne distinkcije između poznavanja pojmova koji su istiniti u svakoj zajednici i drugih tipova komunalnog znanja, kao što su mitologije i pravni sistemi.</p>
+        <p>Pre izuma ili otkrića koncepta „prirode“ (Starogrčki jezik phusis), od strane presokratskih filozofa, postojala je tendencija korišćenja tih reči za opisivanje prirodnog „načina“ na koji biljke rastu, i „načina“ na koji, na primer, jedno pleme bogoslužuje određenog boga. Iz tog razloga se tvrdi da su ti ljudi bili prvi filozofi u striktnom smislu, kao i prvi ljudi da prave jasnu razliku između „prirode“ i „konvencije“. Nauka je dakle razlikovala kao znanje prirode, i stvari koje su istinite za svakoj zajednici, i ime specijalizovane potraga za takvim znanjem je bila filozofija — carstvo prvih filozofa-fizičara. Oni su bili uglavnom spekulatori ili teoretičari, s posebnim interesom za astronomiju. U kontrastu s tim, pokušavanje korišćenja poznavanja prirode da bi se imitirala priroda (veština ili tehnologija, grčki technē) su klasični naučnici smatrali prikladnijim interesom za niže klase zanatlija.</p>
+{% endblock %}

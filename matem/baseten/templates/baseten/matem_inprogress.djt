@@ -1,0 +1,18 @@
+{% extends 'baseten/base_page.djt' %}
+
+{% block PAGE_TITLE %}Matematicari | [mathemating]{% endblock %}
+
+{% block MAIN_MENU %}
+      <a href="/">POCETNA</a>
+      <a href="/calculators/">KALKULATORI</a>
+      <a href="" id="current">MATEMATICARI</a>
+      <a href="/links/">LINKOVI</a>
+{% endblock %}
+
+{% block SIDE_LINKS %}
+        <p>U IZRADI</p>
+{% endblock %}
+
+{% block MAIN_CONTENT %}
+        <h2>Stranica je u izradi</h2>
+{% endblock %}

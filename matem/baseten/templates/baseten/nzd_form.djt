@@ -1,0 +1,37 @@
+{% extends 'baseten/base_page.djt' %}
+
+{% block PAGE_TITLE %}NZD | [mathemating]{% endblock %}
+
+{% block MAIN_MENU %}
+      <a href="/">POCETNA</a>
+      <a href="" id="current">KALKULATORI</a>
+      <a href="/mathematicians/">MATEMATICARI</a>
+      <a href="#">LINKOVI</a>
+{% endblock %}
+
+{% block SIDE_LINKS %}
+        <p>KALKULATORI</p>
+        <ul>
+          <li><a href="/calculators/power/">STEPEN</a></li>
+          <li><a href="/calculators/factorial/">FAKTORIJEL</a></li>
+          <li><a href="" id="curr">NZD</a></li>
+          <li><a href="/calculators/primes/">PROSTI BROJEVI</a></li>
+          <li><a href="/calculators/prime-factors/">PROSTI CINIOCI</a></li>
+        </ul>
+{% endblock %}
+
+{% block MAIN_CONTENT %}
+        <h2>Najveci zajednicki delilac</h2>
+        <p>Ovo je forma za unos podataka u obliku dva cela broja za koje se
+          izracunava njihov najveci zajednicki delilac. Oba broja moraju biti
+          u intervalu [-1000000000, 1000000000].</p>
+        <p>Nakon popunjavanja forme klikni na '<em>IZRACUNAJ</em>'.
+        <form action="" method="post" novalidate>
+          <table>
+            <tr><th>{{ form.a.label_tag }}</th><td>{{ form.a }}</td><td class="ierr">{{ form.a.errors }}</td></tr>
+            <tr><th>{{ form.b.label_tag }}</th><td>{{ form.b }}</td><td class="ierr">{{ form.b.errors }}</td></tr>
+            <tr><td colspan="3"><input id="isub" type="submit" value="IZRACUNAJ" /></td></tr>
+          </table>
+          {% csrf_token %}
+        </form>
+{% endblock %}

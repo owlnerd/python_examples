@@ -1,0 +1,30 @@
+{% extends 'baseten/base_page.djt' %}
+
+{% block PAGE_TITLE %}Primene Matematike | [mathemating]{% endblock %}
+
+{% block MAIN_MENU %}
+      <a href="/" id="current">POCETNA</a>
+      <a href="/calculators/">KALKULATORI</a>
+      <a href="/mathematicians/">MATEMATICARI</a>
+      <a href="#">LINKOVI</a>
+{% endblock %}
+
+{% block SIDE_LINKS %}
+        <p>MATEMATIKA</p>
+        <ul>
+          <li><a href="/o-nauci/">O NAUCI</a></li>
+          <li><a href="/o-matematici/">O MATEMATICI</a></li>
+          <li><a id="curr" href="">PRIMENE MATEMATIKE</a></li>
+        </ul>
+        <p>KORISNI LINKOVI</p>
+        <ul>
+          <li><a href="https://www.wikipedia.org/">WIKIPEDIA</a></li>
+          <li><a href="https://www.wolframalpha.com/">WOLFRAM</a></li>
+        </ul>
+{% endblock %}
+
+{% block MAIN_CONTENT %}
+        <h2>Primene matematike</h2>
+        <p>Godine su <strong>mnoge</strong>, a ledja <strong>nejaka</strong>,
+          godine su teske, zgurila se <strong>baba</strong>.
+{% endblock %}

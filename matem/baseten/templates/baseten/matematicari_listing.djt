@@ -1,0 +1,39 @@
+{% extends 'baseten/base_page.djt' %}
+
+{% block PAGE_TITLE %}Matematicari listing | [mathemating]{% endblock %}
+
+{% block MAIN_MENU %}
+      <a href="/">POCETNA</a>
+      <a href="/calculators/ ">KALKULATORI</a>
+      <a href="" id="current">MATEMATICARI</a>
+      <a href="#">LINKOVI</a>
+{% endblock %}
+
+{% block SIDE_LINKS %}
+        <p>MATEMATICARI</p>
+        <ul>
+          <li><a href="/mathematicians/input-mathematician/">UNOS MATEMATICARA</a></li>
+          <li><a href="" id="curr">LISTANJE MATEMATICARA</a></li>
+          <li><a href="/mathematicians/delete-mathematician/">BRISANJE MATEMATICARA</a></li>
+        </ul>
+{% endblock %}
+
+{% block MAIN_CONTENT %}
+        <h2>Listing matematicara</h2>
+        {% if matematicari %}
+        <table class="listing">
+          <tr>
+            <th>Ime</th>
+            <th>Prezime</th>
+          </tr>
+          {% for mat in matematicari %}
+          <tr class="{% cycle 'even' ''%}">
+            <td>{{ mat.fname }}</td>
+            <td>{{ mat.lname }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+        {% else %}
+        <p>Nema matematicara u bazi.</p>
+        {% endif %}
+{% endblock %}
