@@ -4,7 +4,6 @@ from django.http import HttpResponse
 from django.template import Template, Context
 from django.template.loader import get_template
 from baseten.models import *
-from baseten.models import *
 from django.forms import formset_factory
 
 
